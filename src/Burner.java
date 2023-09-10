@@ -1,3 +1,19 @@
+/*Class: Burner
+ * 
+ * Purpose and responsibilities:
+ * The purpose of this class is to represent a burner on a stove. The burner has a few instance variables a setting object mySetting
+ * , a temperature object called myTemperature, an int timer, and a constant int TIME_DURATION. Burner's constructor creates a burner object
+ * and sets the temperature to cold, the setting to off, and the timer to zero. The plusButton method increases the setting of the burner
+ * only if it isn't the highest setting. The minusButton method decreases the setting only if the setting isn't off. Both of these methods set timer 
+ * to TIME_DURATION. Display method displays the setting of the burner and the temperature. updateTemperature changes the temp of the burner if 
+ * the timer has reached zero and the next temperature is within that setting's threshold.
+ * 
+ * Authors: Mallorie M, Ben G
+ * 
+ * Date: 9/10/2023
+ * */
+
+
 public class Burner{
 	public enum Temperature{
 		BLAZING, HOT, WARM, COLD;
