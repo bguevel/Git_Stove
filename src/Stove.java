@@ -10,11 +10,6 @@ import java.util.ArrayList;
  */
 public class Stove {
 	// Our stove will have 4 burners
-	public enum Burner{
-		HOT, WARM, COLD;
-		Burner(){
-	}
-	}
 	public final static int NUM_BURNERS = 4;
 	private ArrayList<Burner> burners; 
 	
@@ -35,7 +30,7 @@ public class Stove {
 	 **** You must write the following method ****
 	 */
 	public void displayStove() {
-
+		
 	}
 	
 	/**

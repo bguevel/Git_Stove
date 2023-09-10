@@ -49,6 +49,14 @@ public class Burner{
 		}
 	}
 	public void updateTemperature(){
+		
+		
+		
+		
+		
+		
+		
+		/*
 		if(mySetting == Setting.HIGH && myTemperature == Temperature.BLAZING && timer==0) {
 			return;
 		}
@@ -82,6 +90,8 @@ public class Burner{
 		if(mySetting == Setting.LOW && myTemperature == Temperature.COLD && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.WARM;
-		}
+		} 
+		 * */
+
 }
 }
