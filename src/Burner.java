@@ -21,10 +21,13 @@ public class Burner{
 			break;
 		case MEDIUM :
 			mySetting = Setting.HIGH;
+			break;
 		case LOW :
 			mySetting = Setting.MEDIUM;
+			break;
 		case OFF:
 			mySetting = Setting.LOW;
+			break;
 		
 		}
 		timer = TIME_DURATION;
@@ -44,44 +47,51 @@ public class Burner{
 		timer = TIME_DURATION;
 	}
 	public void display() {
-		if(myTemperature == Temperature.BLAZING) {
-			System.out.println(mySetting.toString()+"....."+"VERY HOT! DON'T TOUCH");
+		System.out.print("["+mySetting.toString()+"].....");
+		if(myTemperature == Temperature.COLD) {
+			System.out.println("cooool");
+		}else if(myTemperature == Temperature.WARM) {
+			System.out.println("warm");
+		}else if(myTemperature == Temperature.HOT) {
+			System.out.println("CAREFUL");
+		}else if(myTemperature == Temperature.BLAZING) {
+			System.out.println("VERY HOT! DON'T TOUCH");
 		}
 	}
 	public void updateTemperature(){
 		if(mySetting == Setting.HIGH && myTemperature == Temperature.BLAZING && timer==0) {
 			return;
-		}
-		if(mySetting == Setting.HIGH && myTemperature == Temperature.HOT && timer==0) {
+		}else if(mySetting == Setting.HIGH && myTemperature == Temperature.HOT && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.BLAZING;
 		}
-		if(mySetting == Setting.HIGH && myTemperature == Temperature.WARM && timer==0) {
+		else if(mySetting == Setting.HIGH && myTemperature == Temperature.WARM && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.HOT;
 			
 		}
-		if(mySetting == Setting.HIGH && myTemperature == Temperature.COLD && timer==0) {
+		else if(mySetting == Setting.HIGH && myTemperature == Temperature.COLD && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.WARM;
 		}
-		if(mySetting == Setting.MEDIUM && myTemperature == Temperature.HOT && timer==0) {
+		else if(mySetting == Setting.MEDIUM && myTemperature == Temperature.HOT && timer==0) {
 			return;
 		}
-		if(mySetting == Setting.MEDIUM && myTemperature == Temperature.WARM && timer==0) {
+		else if(mySetting == Setting.MEDIUM && myTemperature == Temperature.WARM && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.HOT;
 		}
-		if(mySetting == Setting.MEDIUM && myTemperature == Temperature.COLD && timer==0) {
+		else if(mySetting == Setting.MEDIUM && myTemperature == Temperature.COLD && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.WARM;
 		}
-		if(mySetting == Setting.LOW && myTemperature == Temperature.WARM && timer==0) {
+		else if(mySetting == Setting.LOW && myTemperature == Temperature.WARM && timer==0) {
 			return;
 		}
-		if(mySetting == Setting.LOW && myTemperature == Temperature.COLD && timer==0) {
+		else if(mySetting == Setting.LOW && myTemperature == Temperature.COLD && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.WARM;
 		}
+		timer--;
 }
 }

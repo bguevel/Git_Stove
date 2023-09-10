@@ -10,14 +10,8 @@ import java.util.ArrayList;
  */
 public class Stove {
 	// Our stove will have 4 burners
-	public enum Burner{
-		HOT, WARM, COLD;
-		Burner(){
-	}
-	}
 	public final static int NUM_BURNERS = 4;
 	private ArrayList<Burner> burners; 
-	
 	/** 
 	 * Constructor for the stove
 	 * Set up the burners
@@ -25,8 +19,9 @@ public class Stove {
 	public Stove() 
 	{
 		burners = new ArrayList<Burner>();	
-		for (int i=0; i<NUM_BURNERS; i++)
+		for (int i=0; i<NUM_BURNERS; i++) {
 			burners.add(new Burner());
+		}
 	}
 	
 	/**
@@ -35,7 +30,18 @@ public class Stove {
 	 **** You must write the following method ****
 	 */
 	public void displayStove() {
-
+		//loop through burners in list displaying them
+		boolean blaze = false;
+		for(Burner i: burners) {
+			if(i.getMyTemperature()==Burner.Temperature.BLAZING) {
+				//if any burner is blazing, set blaze to true so warning is printed
+				blaze=true;
+			}
+			i.display();
+		}
+		if(blaze) {
+			System.out.println("RED LIGHT - HOT BURNER ALERT");
+		}
 	}
 	
 	/**
@@ -97,7 +103,7 @@ public class Stove {
 		Stove stove = new Stove();
 		
 		System.out.println("Beginning stove state ");
-		// trun the burners up
+		// turn the burners up
 		stove.displayStove();
 		stove.turnBurnersUp();
 		stove.timePassing(6);
