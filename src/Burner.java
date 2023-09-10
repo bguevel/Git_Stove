@@ -82,7 +82,7 @@ public class Burner{
 					timer = 0;
 					break;
 				case BLAZING:
-					//timer = 0;
+					timer = 0;
 					break;
 				}
 			}else if(mySetting == Setting.MEDIUM) {
@@ -97,7 +97,7 @@ public class Burner{
 					timer = 0;
 					break;
 				case HOT:
-					//timer = 0;
+					timer = 0;
 				case BLAZING:
 					myTemperature = Temperature.HOT;
 					timer = TIME_DURATION;
@@ -112,7 +112,7 @@ public class Burner{
 					timer = 0;
 					break;
 				case WARM:
-					//timer = 0;
+					timer = 0;
 					break;
 				case HOT:
 					myTemperature = Temperature.WARM;
@@ -127,7 +127,7 @@ public class Burner{
 				//adjust based on temp
 				switch(myTemperature) {
 				case COLD:
-					//timer = 0;
+					timer = 0;
 					break;
 				case WARM:
 					myTemperature = Temperature.COLD;
