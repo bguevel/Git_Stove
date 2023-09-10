@@ -36,10 +36,13 @@ public class Burner{
 		switch(mySetting) {
 		case HIGH:
 			mySetting = Setting.MEDIUM;
+			break;
 		case MEDIUM:
 			mySetting = Setting.LOW;
+			break;
 		case LOW:
 			mySetting = Setting.OFF;
+			break;
 		case OFF:
 			// should there also be return in this one
 			break;
@@ -59,39 +62,37 @@ public class Burner{
 		}
 	}
 	public void updateTemperature(){
+		/*
 		if(mySetting == Setting.HIGH && myTemperature == Temperature.BLAZING && timer==0) {
 			return;
 		}else if(mySetting == Setting.HIGH && myTemperature == Temperature.HOT && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.BLAZING;
-		}
-		else if(mySetting == Setting.HIGH && myTemperature == Temperature.WARM && timer==0) {
+		}else if(mySetting == Setting.HIGH && myTemperature == Temperature.WARM && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.HOT;
 			
-		}
-		else if(mySetting == Setting.HIGH && myTemperature == Temperature.COLD && timer==0) {
+		}else if(mySetting == Setting.HIGH && myTemperature == Temperature.COLD && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.WARM;
-		}
-		else if(mySetting == Setting.MEDIUM && myTemperature == Temperature.HOT && timer==0) {
+		}else if(mySetting == Setting.MEDIUM && myTemperature == Temperature.HOT && timer==0) {
 			return;
-		}
-		else if(mySetting == Setting.MEDIUM && myTemperature == Temperature.WARM && timer==0) {
+		}else if(mySetting == Setting.MEDIUM && myTemperature == Temperature.WARM && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.HOT;
-		}
-		else if(mySetting == Setting.MEDIUM && myTemperature == Temperature.COLD && timer==0) {
+		}else if(mySetting == Setting.MEDIUM && myTemperature == Temperature.COLD && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.WARM;
-		}
-		else if(mySetting == Setting.LOW && myTemperature == Temperature.WARM && timer==0) {
+		}else if(mySetting == Setting.LOW && myTemperature == Temperature.WARM && timer==0) {
 			return;
-		}
-		else if(mySetting == Setting.LOW && myTemperature == Temperature.COLD && timer==0) {
+		}else if(mySetting == Setting.LOW && myTemperature == Temperature.COLD && timer==0) {
 			timer = TIME_DURATION;
 			myTemperature = Temperature.WARM;
-		}
+		}else if(mySetting == Setting.OFF && myTemperature == Temperature.WARM && timer==0) {
+			timer = TIME_DURATION;
+			myTemperature = Temperature.COLD;
+		}*/
+		
 		timer--;
 }
 }
