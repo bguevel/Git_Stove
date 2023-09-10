@@ -7,5 +7,5 @@ public enum Setting{
 	public String toString() {
 		return value;
 	}
-	
+
 }

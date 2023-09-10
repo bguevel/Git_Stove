@@ -28,7 +28,7 @@ public class Burner{
 		case OFF:
 			mySetting = Setting.LOW;
 			break;
-		
+
 		}
 		timer = TIME_DURATION;
 	}
@@ -59,10 +59,10 @@ public class Burner{
 			System.out.println("CAREFUL");
 		}else if(myTemperature == Temperature.BLAZING) {
 			System.out.println("VERY HOT! DON'T TOUCH");
-		}
+	}
 	}
 	public void updateTemperature(){
-		timer--;
+		if(timer!=0) timer--;
 		//check timer
 		if(timer == 0) {
 			//organize by setting, and within do individual rules
@@ -144,6 +144,5 @@ public class Burner{
 				}
 			}
 		}
-		
 }
 }
